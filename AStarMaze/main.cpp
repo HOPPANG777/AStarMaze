@@ -1,7 +1,4 @@
-﻿#pragma once
-// 중복된 헤더를 제외해주는 역할
-
-#define _CRT_SECURE_NO_WARNINGS	// scanf경고 무시
+﻿#define _CRT_SECURE_NO_WARNINGS	// scanf경고 무시
 
 // 언어의 표준 헤더
 // std -> Standard Input Output(표준입출력) 헤더
@@ -23,7 +20,7 @@
 
 // MAZE_SIZE: 미로의 크기를 정의 (홀수 값 권장: DFS 미로 생성에 유리함)
 // 여기서는 31로 설정 (인덱스 0 ~ 30)
-#define MAZE_SIZE 31
+#define MAZE_SIZE 15
 
 // INF: 초기 이동 비용을 나타내는 매우 큰 값. 
 // 실제 경로 비용은 이 값보다 항상 작게 되어야 합니다.
@@ -59,9 +56,19 @@ typedef struct
 Node* openList = (Node*)malloc(sizeof(Node) * MAZE_SIZE * MAZE_SIZE);
 static int openCount = 0;
 
+void MoveCursorToTopLeft()
+{
+	HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD pos = { 0, 0 };
+	SetConsoleCursorPosition(hOut, pos);
+}
+
+
 void visualizeMaze(int maze[MAZE_SIZE][MAZE_SIZE], bool closed[MAZE_SIZE][MAZE_SIZE], int x, int y)
 {
-	system("cls"); // 콘솔 클리어
+	//system("cls"); // 콘솔 클리어
+
+	MoveCursorToTopLeft();
 
 	for (int i = 0; i < MAZE_SIZE; i++)
 	{
@@ -76,6 +83,15 @@ void visualizeMaze(int maze[MAZE_SIZE][MAZE_SIZE], bool closed[MAZE_SIZE][MAZE_S
 	}
 
 	Sleep(20); // 약간의 지연 (20ms)
+}
+
+void HideCursor()
+{
+	HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO cursorInfo;
+	GetConsoleCursorInfo(hOut, &cursorInfo);
+	cursorInfo.bVisible = FALSE;
+	SetConsoleCursorInfo(hOut, &cursorInfo);
 }
 
 // ----------------------------------------------------------------------
@@ -489,6 +505,8 @@ void generateMazeDFS(int maze[MAZE_SIZE][MAZE_SIZE])
 
 int main()
 {
+	HideCursor();
+
 	// 난수 생성을 위한 시드 설정: 현재 시간을 기준으로 하여 매 실행마다 다른 미로를 생성합니다.
 	srand((unsigned int)time(NULL));
 
