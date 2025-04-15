@@ -20,7 +20,7 @@
 
 // MAZE_SIZE: 미로의 크기를 정의 (홀수 값 권장: DFS 미로 생성에 유리함)
 // 여기서는 31로 설정 (인덱스 0 ~ 30)
-#define MAZE_SIZE 15
+#define MAZE_SIZE 29
 
 // INF: 초기 이동 비용을 나타내는 매우 큰 값. 
 // 실제 경로 비용은 이 값보다 항상 작게 되어야 합니다.
@@ -547,6 +547,8 @@ int main()
 		parentX = NULL;
 		parentY = NULL;
 		openList = NULL;
+
+		system("pause");  // 콘솔 창이 바로 닫히지 않도록 일시 정지
 
 		return 0;
 	}
