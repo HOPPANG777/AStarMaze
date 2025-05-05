@@ -259,8 +259,7 @@ int main()
 	pathY[pathLength++] = startY;
 
 	printf("\nÃ£Àº °æ·Î (ÃÑ %d ½ºÅÜ):\n", pathLength);
-	for (int i = pathLength - 1; i >= 0; i--)
-		printf("(%d, %d) ", pathX[i], pathY[i]);
+	for (int i = pathLength - 1; i >= 0; i--) printf("(%d, %d) ", pathX[i], pathY[i]);
 	printf("\n");
 
 	printMazeWithPath(maze, pathX, pathY, pathLength, startX, startY, goalX, goalY);
