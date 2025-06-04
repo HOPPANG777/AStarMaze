@@ -14,8 +14,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6d4078d1-5951-4ed1-ac0e-0a8099c1cce5}"
@@ -30,11 +34,11 @@
               "Title": "main2.cpp",
               "DocumentMoniker": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.cpp",
               "RelativeDocumentMoniker": "AStarMaze\\main2.cpp",
-              "ToolTip": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.cpp*",
-              "RelativeToolTip": "AStarMaze\\main2.cpp*",
-              "ViewState": "AgIAACUAAAAAAQAAAAABwDgAAAAqAAAAAAAAAA==",
+              "ToolTip": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.cpp",
+              "RelativeToolTip": "AStarMaze\\main2.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-17T12:03:32.376Z",
+              "WhenOpened": "2025-06-03T09:43:17.236Z",
               "EditorCaption": ""
             }
           ]
