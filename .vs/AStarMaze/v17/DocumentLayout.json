@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\VicZero_Coding\\Project\\AStarMaze\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFF391-F404-4877-A061-03BA321A219A}|AStarMaze\\AStarMaze.vcxproj|D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E7BFF391-F404-4877-A061-03BA321A219A}|AStarMaze\\AStarMaze.vcxproj|solutionrelative:AStarMaze\\main2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E7BFF391-F404-4877-A061-03BA321A219A}|AStarMaze\\AStarMaze.vcxproj|D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E7BFF391-F404-4877-A061-03BA321A219A}|AStarMaze\\AStarMaze.vcxproj|solutionrelative:AStarMaze\\main2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFF391-F404-4877-A061-03BA321A219A}|AStarMaze\\AStarMaze.vcxproj|D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E7BFF391-F404-4877-A061-03BA321A219A}|AStarMaze\\AStarMaze.vcxproj|solutionrelative:AStarMaze\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,14 +34,27 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main.c",
+              "RelativeDocumentMoniker": "AStarMaze\\main.c",
+              "ToolTip": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main.c",
+              "RelativeToolTip": "AStarMaze\\main.c",
+              "ViewState": "AgIAACQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-08-07T08:24:13.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "main2.cpp",
-              "DocumentMoniker": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.cpp",
-              "RelativeDocumentMoniker": "AStarMaze\\main2.cpp",
-              "ToolTip": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.cpp",
-              "RelativeToolTip": "AStarMaze\\main2.cpp",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAAKkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "Title": "main2.c",
+              "DocumentMoniker": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.c",
+              "RelativeDocumentMoniker": "AStarMaze\\main2.c",
+              "ToolTip": "D:\\VicZero_Coding\\Project\\AStarMaze\\AStarMaze\\main2.c",
+              "RelativeToolTip": "AStarMaze\\main2.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-06-03T09:43:17.236Z",
               "EditorCaption": ""
             }

@@ -175,16 +175,23 @@ Node popMin()
 }
 
 // 함수: heuristic
-// 현재 좌표 (x, y)에서 목표 (goalX, goalY)까지의 맨해튼 거리를 계산하여 반환합니다.
-//==============================================================================
+// 현재 좌표 (x, y)에서 목표 (goalX, goalY)까지의 
+// 맨해튼 거리를 계산하여 반환합니다.
+//==============================================
 // 유틸리티 함수
-//==============================================================================
+//==============================================
 int heuristic(int x, int y, int goalX, int goalY)
 {
-	return abs(x - goalX) + abs(y - goalY);
-}
+	return (x >= goalX ? x - goalX : goalX - x) + 
+		   (y >= goalY ? y - goalY : goalY - y);
+} 
 
-void initializeArrays(int maze[MAZE_SIZE][MAZE_SIZE], bool closed[MAZE_SIZE][MAZE_SIZE], int gCost[MAZE_SIZE][MAZE_SIZE], int parentX[MAZE_SIZE][MAZE_SIZE], int parentY[MAZE_SIZE][MAZE_SIZE])
+void initializeArrays
+(
+	int maze[MAZE_SIZE][MAZE_SIZE], bool closed[MAZE_SIZE][MAZE_SIZE], 
+	int gCost[MAZE_SIZE][MAZE_SIZE], 
+	int parentX[MAZE_SIZE][MAZE_SIZE], int parentY[MAZE_SIZE][MAZE_SIZE]
+)
 {
 	for (int i = 0; i < MAZE_SIZE; i++)
 	{
@@ -314,10 +321,16 @@ bool aStar
 	return false;
 }
 
-//==============================================================================
+//=========================================================
 // 경로 출력
-//==============================================================================
-void printMazeWithPath(int maze[MAZE_SIZE][MAZE_SIZE], int pathX[], int pathY[], int pathLength, int startX, int startY, int goalX, int goalY)
+//=========================================================
+void printMazeWithPath
+(
+	int maze[MAZE_SIZE][MAZE_SIZE], 
+	int pathX[], int pathY[], int pathLength, 
+	int startX, int startY, 
+	int goalX, int goalY
+)
 {
 	char display[MAZE_SIZE][MAZE_SIZE];
 	for (int i = 0; i < MAZE_SIZE; i++)
@@ -328,7 +341,9 @@ void printMazeWithPath(int maze[MAZE_SIZE][MAZE_SIZE], int pathX[], int pathY[],
 		}
 	}
 	for (int i = 0; i < pathLength; i++)
+	{
 		display[pathX[i]][pathY[i]] = '.';
+	}
 	display[startX][startY] = 'S';
 	display[goalX][goalY] = 'E';
 
@@ -336,7 +351,9 @@ void printMazeWithPath(int maze[MAZE_SIZE][MAZE_SIZE], int pathX[], int pathY[],
 	for (int i = 0; i < MAZE_SIZE; i++)
 	{
 		for (int j = 0; j < MAZE_SIZE; j++)
+		{
 			printf("%c ", display[i][j]);
+		}
 		printf("\n");
 	}
 }
@@ -374,7 +391,7 @@ int main()
 	int pathLength = 0;
 	int cx = goalX, cy = goalY;
 
-	while (!(cx == startX && cy == startY))
+	while (cx != startX && cy != startY)
 	{
 		pathX[pathLength] = cx;
 		pathY[pathLength] = cy;
@@ -385,7 +402,8 @@ int main()
 		cy = tempY;
 	}
 	pathX[pathLength] = startX;
-	pathY[pathLength++] = startY;
+	pathY[pathLength] = startY;
+	pathLength++;
 
 	printf("\n찾은 경로 (총 %d 스텝):\n", pathLength);
 	for (int i = pathLength - 1; i >= 0; i--) printf("(%d, %d) ", pathX[i], pathY[i]);
